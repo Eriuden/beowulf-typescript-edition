@@ -27,9 +27,14 @@ const agentSchema = new mongoose.Schema(
       minlength: 6,
     },
 
-    bio: {
-      type: String,
-      max: 1024,
+    workOnFiles: {
+        type: [
+            {
+                typeString: String,
+                trim: true,
+                max: 1000,
+            }
+        ],
     },
   },
   {
