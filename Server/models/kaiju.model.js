@@ -16,6 +16,10 @@ const KaijuSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  threatForOtherKaijus : {
+    type: string,
+    required: true,
+  },
   powers: {
     type: String,
     required: true
