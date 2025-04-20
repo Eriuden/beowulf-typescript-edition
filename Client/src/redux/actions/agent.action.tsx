@@ -12,7 +12,7 @@ type agentProps = {
     password: string
 }
 
-export const getagent = (uid: string, dispatch:any) => {
+export const getAgent = (uid: string, dispatch:any) => {
         return axios 
             .get(`${process.env.REACT_APP_API_URL}api/agent/${uid}`)
             .then((res) => {
@@ -21,7 +21,7 @@ export const getagent = (uid: string, dispatch:any) => {
             .catch((err) => window.alert(err))
 }
 
-export const updateagent = ({agentId, name} : agentProps, dispatch: any) => { 
+export const updateAgent = ({agentId, name} : agentProps, dispatch: any) => { 
         return axios({
             method:"put",
             url:`${process.env.REACT_APP_API_URL}api/agent` + agentId,
@@ -33,7 +33,7 @@ export const updateagent = ({agentId, name} : agentProps, dispatch: any) => {
 }
 
 
-export const deleteagent = ({agentId, name, email, password} : agentProps, dispatch:any) => {
+export const deleteAgent = ({agentId, name, email, password} : agentProps, dispatch:any) => {
         return axios({
             method:"delete",
             url: `${process.env.REACT_APP_API_URL}api/agent/${agentId}`,
