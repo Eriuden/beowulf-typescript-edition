@@ -2,7 +2,7 @@ import { DELETE_KAIJU, GET_KAIJU, UPDATE_KAIJU } from "../actions/kaiju.action";
 
 const initialState:any = {};
 
-export default function kaijuReducer(state = initialState, action:any) {
+export const kaijuReducer = (state = initialState, action:any) => {
   switch (action.type) {
 
     case GET_KAIJU:

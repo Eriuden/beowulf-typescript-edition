@@ -15,7 +15,10 @@
     "hamburger-react": "^2.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-modal": "^3.16.3"
+    "react-modal": "^3.16.3",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
