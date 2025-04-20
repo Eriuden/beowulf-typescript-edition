@@ -1,6 +1,6 @@
 import { GET_KAIJU_ERRORS } from "../actions/kaiju.action";
 
-const initialState = {agentError : [], kaijuError : []}
+const initialState = { kaijuError : []}
 
 export const errorReducer = (state = initialState, action:any) => {
     switch (action.type) {
