@@ -1,4 +1,5 @@
 import React from 'react'
+import { EditDeleteButton } from './EditDeleteButton'
 
 type kaijuProps = {
     kaijuId: string,
@@ -18,9 +19,7 @@ export const KaijuCard = (kaijuProps: kaijuProps) => {
     <div>
       <h2>{kaijuProps.name}</h2>
       <img src={kaijuProps.picture} alt="" />
-      <DeleteButton kaijuID={kaijuProps.kaijuId} />
-      <UpdateKaijuForm
-        kaiju={kaijuProps}/>
+      <EditDeleteButton edelProps={kaijuProps} />
     </div>
   )
 }
