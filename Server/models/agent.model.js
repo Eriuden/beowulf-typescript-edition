@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 const agentSchema = new mongoose.Schema(
   {
-    pseudo: {
+    name: {
       type: String,
       required: true,
       minlength: 3,
