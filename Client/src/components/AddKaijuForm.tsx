@@ -8,7 +8,7 @@ export const AddKaijuForm = () => {
   type appDispatch = () => any
 
   const [name, setName] = useState("");
-  const [picture, setPicture] = useState(null);
+  const [picture, setPicture] = useState("");
   const [threatForHumanity, setThreatForHumanity] = useState("");
   const [threatForEarth, setThreatForEarth] = useState("");
   const [threatForOtherKaijus, setThreatForOtherKaijus] = useState("");
