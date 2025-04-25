@@ -19,11 +19,11 @@ type kaijuProps = {
     description: string
 }
 
-export const getKaijus = (num: number, dispatch: any) => { 
+export const getKaijus = (id:number, dispatch: any) => { 
     return axios
       .get(`${process.env.REACT_APP_API_URL}api/kaiju`)
       .then((res) => {
-        const array = res.data.slice(0,num)
+        const array = id
         dispatch({ type: GET_KAIJU, payload: array})
         dispatch({ type: GET_ALLKAIJUS, payload: res.data });
       })
