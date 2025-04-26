@@ -45,17 +45,17 @@ export const addKaiju = (data:any, dispatch: any) => {
 };
 
 export const updateKaiju = (
-  {
-    kaijuId,
-    name,
-    threatForHumanity,
-    threatForEarth,
-    threatForOtherKaiju,
-    powers, 
-    size, 
-    weight, 
-    description
-  } : kaijuProps , dispatch: any
+
+    kaijuId:Number,
+    name: string,
+    threatForHumanity:string,
+    threatForEarth:string,
+    threatForOtherKaiju:string,
+    powers:string, 
+    size:string, 
+    weight:string, 
+    description:string
+   , dispatch: any
 ) => { 
     return axios({
       method: "put",
