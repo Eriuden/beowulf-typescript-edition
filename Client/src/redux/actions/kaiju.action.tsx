@@ -72,31 +72,14 @@ export const updateKaiju = (
 };
 
 export const deleteKaiju = (
-    {
-        kaijuId,
-        picture,
-        name,
-        threatForHumanity,
-        threatForEarth,
-        threatForOtherKaiju,
-        powers, 
-        size, 
-        weight, 
-        description
-      } : kaijuProps, dispatch: any
+    
+        kaijuId:Number,
+        dispatch:any
 ) => {
     return axios({
       method: "delete",
       url: `${process.env.REACT_APP_API_URL}api/kaiju/${kaijuId}`,
-      data: { picture,
-        name,
-        threatForHumanity,
-        threatForEarth,
-        threatForOtherKaiju,
-        powers, 
-        size, 
-        weight, 
-        description },
+      data: { kaijuId },
     })
       .then(() => {
         dispatch({ type: DELETE_KAIJU, payload: { kaijuId } });
