@@ -2,7 +2,7 @@ import React from 'react'
 import { EditDeleteButton } from './EditDeleteButton'
 
 type kaijuProps = {
-    kaijuId: string,
+    kaijuId: number,
     picture: string,
     name: string,
     threatForHumanity: string,
