@@ -8,6 +8,7 @@ import { ConnexionModal } from '../components/Connexion'
 import { AddKaijuForm } from '../components/AddKaijuForm'
 import { ShowKaiju } from '../components/ShowKaiju'
 import { getKaijus } from '../redux/actions/kaiju.action'
+import { KaijuCard } from '../components/KaijuCard'
 
 type kaijuProps = {
     kaijuId: number,
@@ -27,7 +28,7 @@ export const Home = (kaiju: kaijuProps) => {
 
     type appDispatch =() => any
 
-    const [showKaiju, setShowKaiju] = useState("false");
+    const [showKaiju, setShowKaiju] = useState(false);
 
     const useAppDispatch = () => useDispatch<appDispatch>()
     const dispatch = useAppDispatch()
@@ -42,6 +43,36 @@ export const Home = (kaiju: kaijuProps) => {
       getKaijus(kaiju.kaijuId,dispatch)
     })
   return (
-    <div>Home</div>
+    <div>
+        {uid ? (
+          <>
+            <div className="preloader">
+              <h1>
+                Dossiers top secret, ces informations peuvent mettre votre vie
+                en danger
+              </h1>
+              <span className="loader"></span>
+            </div>
+            <AddKaijuForm />
+         
+            {showKaiju && <ShowKaiju kaiju={kaiju} />}
+
+            <ul>
+              {!isEmpty(kaijus) &&
+                kaijus.map((kaiju:kaijuProps) => {
+                  return (
+                    <KaijuCard
+                      onClick={() => setShowKaiju(!showKaiju)}
+                      kaijuProps={kaiju}
+                      key={kaiju.kaijuId}
+                    />
+                  );
+                })}
+            </ul>
+          </>
+        ) : (
+          <ConnexionModal />
+        )}
+    </div>
   )
 }

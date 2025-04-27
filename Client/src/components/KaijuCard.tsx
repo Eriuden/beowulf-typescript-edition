@@ -12,6 +12,7 @@ type kaijuProps = {
     size: string,
     weight: string,
     description: string
+    onClick: any
 }
 
 export const KaijuCard = (kaijuProps: kaijuProps) => {
