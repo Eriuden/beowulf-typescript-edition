@@ -63,7 +63,7 @@ export const Home = (kaiju: kaijuProps) => {
                   return (
                     <KaijuCard
                       onClick={() => setShowKaiju(!showKaiju)}
-                      kaijuProps={kaiju}
+                      {...kaiju}
                       key={kaiju.kaijuId}
                     />
                   );

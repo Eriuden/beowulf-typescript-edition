@@ -20,7 +20,7 @@ export const KaijuCard = (kaijuProps: kaijuProps) => {
     <div>
       <h2>{kaijuProps.name}</h2>
       <img src={kaijuProps.picture} alt="" />
-      <EditDeleteButton edelProps={kaijuProps} />
+      <EditDeleteButton {...kaijuProps} />
     </div>
   )
 }
