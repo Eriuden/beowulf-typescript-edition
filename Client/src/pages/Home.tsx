@@ -33,7 +33,8 @@ export const Home = (kaiju: kaijuProps) => {
     const useAppDispatch = () => useDispatch<appDispatch>()
     const dispatch = useAppDispatch()
     setTimeout(() => {
-      document.querySelector(".preloader").style.display = "none";
+      const preloader = document.querySelector(".preloader") as HTMLElement
+      preloader.style.display = "none";
     }, 10000);
   
     const kaijus = useSelector((state:any) => state.kaijusReducer);
